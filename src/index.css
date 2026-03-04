@@ -5,7 +5,7 @@
   --side-padding-mobile: 30px;
   
   /* Debug borders - change to 'none' to hide */
-  --debug-border: 1px solid blue;
+  --debug-border: 1px solid transparent;
   /* --debug-border: none; */
   
   /* Column guides - change to 'block' to show, 'none' to hide */

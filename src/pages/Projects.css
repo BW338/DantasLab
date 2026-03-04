@@ -1,0 +1,41 @@
+.projects-header {
+  width: 1920px;
+  height: 162px;
+  opacity: 1;
+  position: relative;
+  background: #fff;
+  border: var(--debug-border);
+}
+
+.projects-title {
+  width: 526px;
+  height: 82px;
+  position: absolute;
+  top: 40px;
+  left: 233px;
+  opacity: 1;
+  margin: 0;
+  font-family: 'DM Mono', monospace;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  border: var(--debug-border);
+}
+
+
+.projects-content {
+  width: 1738px;
+  height: 814px;
+  opacity: 1;
+  gap: 22px;
+  padding-right: 139px;
+  padding-left: 139px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 472px);
+  grid-template-rows: repeat(2, 396px);
+  gap: 22px;
+  border: var(--debug-border);
+}

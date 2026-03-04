@@ -1,10 +1,10 @@
 import './Hero.css'
 
-function Hero() {
+function Hero({ title = "Research & Development" }) {
   return (
     <section className="hero">
       <div className="hero-container">
-        <h1>Research & Development</h1>
+        <h1>{title}</h1>
       </div>
     </section>
   )

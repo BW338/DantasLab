@@ -1,43 +1,49 @@
 import './Navigation.css'
 import { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 function Navigation() {
+  const location = useLocation()
   const [activeLink, setActiveLink] = useState('home')
 
   const handleClick = (link) => {
     setActiveLink(link)
   }
 
+  const isActive = (path) => {
+    return location.pathname === path
+  }
+
   return (
     <nav className="nav">
-      <a 
-        href="#home" 
-        className={activeLink === 'home' ? 'active' : ''}
+      <Link 
+        to="/" 
+        className={isActive('/') ? 'active' : ''}
         onClick={() => handleClick('home')}
       >
         <span className="nav-text">HOME</span>
-      </a>
-      <a 
-        href="#publications" 
-        className={activeLink === 'publications' ? 'active' : ''}
+      </Link>
+      <Link 
+        to="/projects" 
+        className={isActive('/projects') ? 'active' : ''}
+        onClick={() => handleClick('projects')}
+      >
+        <span className="nav-text">PROJECTS</span>
+      </Link>
+      <Link 
+        to="/publications" 
+        className={isActive('/publications') ? 'active' : ''}
         onClick={() => handleClick('publications')}
       >
         <span className="nav-text">PUBLICATIONS</span>
-      </a>
-      <a 
-        href="#team" 
-        className={activeLink === 'team' ? 'active' : ''}
+      </Link>
+      <Link 
+        to="/team" 
+        className={isActive('/team') ? 'active' : ''}
         onClick={() => handleClick('team')}
       >
         <span className="nav-text">TEAM</span>
-      </a>
-      <a 
-        href="#work" 
-        className={activeLink === 'work' ? 'active' : ''}
-        onClick={() => handleClick('work')}
-      >
-        <span className="nav-text">WORK WITH US</span>
-      </a>
+      </Link>
     </nav>
   )
 }
