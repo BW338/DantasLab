@@ -1,0 +1,73 @@
+.about {
+  width: 1920px;
+  height: 458px;
+  opacity: 1;
+  background: #fff;
+  position: relative;
+  border: var(--debug-border);
+}
+
+.about h2 {
+  width: 247px;
+  height: 82px;
+  position: absolute;
+  top: 76px;
+  left: 238px;
+  opacity: 1;
+  font-family: 'Fira Code', monospace;
+  font-weight: 450;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin: 0;
+  border: var(--debug-border);
+}
+
+.about-text {
+  width: 471px;
+  height: 359px;
+  position: absolute;
+  top: 50px;
+  left: 478px;
+  opacity: 1;
+  font-family: 'DM Mono', monospace;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 23px;
+  letter-spacing: 0%;
+  border: var(--debug-border);
+}
+
+.about-text p {
+  margin: 0 0 23px 0;
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+.about-image {
+  width: 473px;
+  height: 411px;
+  position: absolute;
+  top: 24px;
+  left: 971px;
+  opacity: 1;
+  background: #D9D9D9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px;
+  border: var(--debug-border);
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    padding: 0 var(--side-padding-mobile);
+  }
+  
+  .about-card {
+    grid-template-columns: 1fr;
+  }
+}

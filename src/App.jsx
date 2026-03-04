@@ -1,10 +1,10 @@
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Research from './components/Research'
-import Mission from './components/Quote/Quote'
-import About from './components/About'
-import Team from './components/Team'
-import Footer from './components/Footer'
+import Quote from './components/Quote/Quote'
+import About from './components/About/About'
+import Team from './components/Team/Team'
+import Footer from './components/Footer/Footer'
 import './App.css'
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <main className="body-container">
         <Hero />
         <Research />
-        <Mission />
+        <Quote />
         <About />
         <Team />
         <Footer />

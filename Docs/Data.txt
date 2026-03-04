@@ -1,3 +1,13 @@
 1| Dantlas Lab:
 -Iniciamos el repositorio con un avance imporante, estamos por la seccion Quote (mission).
 *Procuramos seguir el figma al detalle, resta corroborar el avance con el diseñador.
+
+2| Team:
+-Se crea /Team y se subdivide en componentes. creamos las cards y el carrousel para el 
+caso de que el usuario quiera añadir mas miembros a su equipo.
+
+3| General improvements:
+-Armamos seccion About.
+-Creamos directorios para las secciones.
+-Se añaden franjas guia, se activan/desactivan desde index.css
+-Ajustamos el footer.
