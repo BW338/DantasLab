@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&family=DM+Mono:wght@300;400;500&display=swap');
+
+:root {
+  --side-padding: 213px;
+  --side-padding-mobile: 30px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', monospace;
+  color: #000;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --side-padding: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --side-padding: var(--side-padding-mobile);
+  }
+}

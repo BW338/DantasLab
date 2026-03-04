@@ -1,0 +1,98 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 300px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000;
+  padding: 8px 0;
+  position: relative;
+  overflow: visible;
+  display: block;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  left: -100vw;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: #000;
+}
+
+.nav a:first-child::before {
+  content: '';
+  position: absolute;
+  left: -100vw;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: #000;
+}
+
+.nav a:last-child::after {
+  display: none;
+}
+
+.nav-text {
+  display: inline-block;
+  font-family: 'Fira Code', monospace;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 23px;
+  letter-spacing: 0.25em;
+  vertical-align: middle;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav a:hover:not(.active) .nav-text {
+  letter-spacing: 0.5em;
+  font-weight: 600;
+}
+
+.nav a.active .nav-text {
+  animation: slideFromRight 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-15%);
+    opacity: 0;
+  }
+  55% {
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+  56% {
+    transform: translateX(calc(100% + 60px));
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    float: right;
+    font-weight: 700;
+    letter-spacing: 0.75em;
+    text-align: right;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    width: 50%;
+    min-width: 200px;
+    padding-left: calc(var(--side-padding) * 2);
+  }
+  
+  .nav-text {
+    font-size: 12px;
+  }
+}

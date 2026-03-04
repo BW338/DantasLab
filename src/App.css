@@ -1,0 +1,16 @@
+.body-container {
+  width: 100%;
+  min-height: 3605px;
+  opacity: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .body-container {
+    min-height: auto;
+    gap: 20px;
+  }
+}

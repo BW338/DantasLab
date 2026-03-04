@@ -1,0 +1,183 @@
+.research {
+  width: 100%;
+  min-height: 458px;
+  padding: 0;
+  background: #fff;
+  position: relative;
+  margin-top: 36px;
+  border: 1px solid blue;
+}
+
+.research-content {
+  position: relative;
+  height: 458px;
+}
+
+.research-title {
+  width: 292px;
+  height: 52px;
+  opacity: 1;
+  position: absolute;
+  top: 70px;
+  left: 232px;
+}
+
+.research-title h2 {
+  font-family: 'Fira Code', monospace;
+  font-weight: 450;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #1E1E1E;
+  margin: 0;
+}
+
+.research-text {
+  width: 466px;
+  height: 338px;
+  opacity: 1;
+  position: absolute;
+  top: 60px;
+  left: 485px;
+}
+
+.research-text p {
+  font-family: 'DM Mono', monospace;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 23px;
+  letter-spacing: 0%;
+  color: #1E1E1E;
+  margin-bottom: 20px;
+}
+
+.research-sidebar {
+  position: absolute;
+  top: 15px;
+  left: 972px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.projects,
+.publications {
+  width: 472px;
+  height: 194px;
+  opacity: 1;
+}
+
+.projects h3,
+.publications h3 {
+  width: 177px;
+  height: 31px;
+  opacity: 1;
+  font-family: 'DM Mono', monospace;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #1E1E1E;
+  margin-bottom: 20px;
+}
+
+.projects ul,
+.publications ul {
+  width: 472px;
+  height: 79px;
+  opacity: 1;
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.projects li,
+.publications li {
+  font-family: 'DM Mono', monospace;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 23px;
+  letter-spacing: 0%;
+  margin-bottom: 8px;
+  padding-left: 12px;
+  position: relative;
+}
+
+.projects li::before,
+.publications li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+}
+
+.view-button {
+  width: 472px;
+  height: 24px;
+  opacity: 1;
+  border-radius: 5px;
+  background: #D9D9D9;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0;
+}
+
+.view-button span {
+  width: 189px;
+  height: 18px;
+  font-family: 'DM Mono', monospace;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 23px;
+  letter-spacing: 0%;
+  text-align: right;
+  vertical-align: middle;
+  color: #FFFFFF;
+  position: absolute;
+  top: 2.5px;
+  right: 0;
+  margin-right: 16px;
+}
+
+.view-button:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .research {
+    min-height: auto;
+  }
+  
+  .research-content {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 40px var(--side-padding-mobile);
+  }
+  
+  .research-title {
+    position: static;
+    margin-bottom: 20px;
+  }
+  
+  .research-text {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+  }
+  
+  .research-sidebar {
+    position: static;
+    width: 100%;
+  }
+  
+  .projects,
+  .publications {
+    width: 100%;
+    height: auto;
+  }
+}
