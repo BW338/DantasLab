@@ -52,18 +52,20 @@
 
 .research-sidebar {
   position: absolute;
-  top: 15px;
+  top: 60px;
   left: 972px;
   display: flex;
   flex-direction: column;
   gap: 0px;
+  align-items: center;
 }
 
 .projects,
 .publications {
   width: 472px;
-  height: 194px;
+  height: 164px;
   opacity: 1;
+ /*/ border: 1px solid red;*/
 }
 
 .projects h3,
@@ -77,7 +79,7 @@
   line-height: 100%;
   letter-spacing: 0%;
   color: #1E1E1E;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .projects ul,
@@ -86,8 +88,8 @@
   height: 79px;
   opacity: 1;
   list-style: none;
-  margin-bottom: 20px;
-}
+  margin-bottom: 10px;
+} 
 
 .projects li,
 .publications li {

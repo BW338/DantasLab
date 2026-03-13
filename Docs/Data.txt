@@ -14,3 +14,6 @@ caso de que el usuario quiera añadir mas miembros a su equipo.
 
 4| Projects Page:
 -Creamos la pagina projects con la navegacion, resta seguir trabajando en las cards.
+
+5| Project Cards:
+-Añadimos las cards de los proyectos.

@@ -1,0 +1,284 @@
+.projects-section {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 60px 0;
+  padding-left: 242px;
+}
+
+.projects-container {
+  width: 1436px;
+  height: 703px;
+  opacity: 1;
+  /* border: 2px solid blue; */
+  /* border-bottom: solid 1px black; */
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  position: relative;
+}
+
+.projects-title-container {
+  width: 1436px;
+  height: 52px;
+  opacity: 1;
+  gap: 10px;
+  /* border: 2px solid red; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-title-container h2 {
+  font-family: 'Fira Code', monospace;
+  font-weight: 450;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #1E1E1E;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos unificados para ambas cards */
+.project-card-left,
+.project-card-right {
+  width: 689px;
+  height: 617px;
+  /* border: 2px solid green; */
+  border-bottom: 1px solid black;
+  position: absolute;
+  bottom: 0;
+}
+
+.project-card-left {
+  left: 0;
+}
+
+.project-card-right {
+  right: 0;
+}
+
+.project-top-left,
+.project-top-right {
+  width: 689px;
+  height: 223px;
+  opacity: 1;
+  gap: 12px;
+  padding: 13px;
+  /* border: 2px solid orange; */
+  position: absolute;
+  top: 13px;
+  left: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.project-image-left,
+.project-image-right {
+  width: 297px;
+  height: 197px;
+  opacity: 1;
+  border-radius: 16px;
+  background: #D9D9D9;
+  margin-right: 12px;
+}
+
+.project-text-left,
+.project-text-right {
+  width: 380px;
+  height: 192px;
+  opacity: 1;
+  gap: 6px;
+  padding: 4px 0;
+  /* border: 2px solid gray; */
+  display: flex;
+  flex-direction: column;
+}
+
+.project-bottom-left,
+.project-bottom-right {
+  width: 689px;
+  height: 343px;
+  opacity: 1;
+  gap: 10px;
+  /* border: 2px solid red; */
+  position: absolute;
+  top: 249px;
+  left: 0;
+}
+
+.project-title-left,
+.project-title-right {
+  width: 312px;
+  height: 45px;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.project-title-left h3,
+.project-title-right h3 {
+  font-family: 'Fira Code', monospace;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0%;
+  color: #000000;
+  margin: 0;
+}
+
+.project-description-left,
+.project-description-right {
+  width: 313px;
+  height: 133px;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  padding-top: 12px;
+}
+
+.project-description-left p,
+.project-description-right p {
+  font-family: 'Fira Code', monospace;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 19px;
+  letter-spacing: 0%;
+  color: #1E1E1E;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 40px var(--side-padding-mobile);
+  }
+
+  .projects-container {
+    width: 100%;
+    height: auto;
+  }
+}
+.project-long-text-left,
+.project-long-text-right {
+  width: 625px;
+  height: 320px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: block;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Estilos personalizados para el scroll */
+.project-long-text-left::-webkit-scrollbar,
+.project-long-text-right::-webkit-scrollbar {
+  width: 6px;
+}
+
+.project-long-text-left::-webkit-scrollbar-track,
+.project-long-text-right::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.project-long-text-left::-webkit-scrollbar-thumb,
+.project-long-text-right::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.project-long-text-left::-webkit-scrollbar-thumb:hover,
+.project-long-text-right::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Para Firefox */
+.project-long-text-left,
+.project-long-text-right {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+.project-long-text-left p,
+.project-long-text-right p {
+  font-family: 'Fira Code', monospace;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  color: #000000;
+  margin: 0 0 12px 0;
+  text-align: justify;
+}
+
+.project-long-text-left p:last-child,
+.project-long-text-right p:last-child {
+  margin-bottom: 0;
+}
+/* Ocultar scrollbar nativo */
+.project-long-text-left::-webkit-scrollbar,
+.project-long-text-right::-webkit-scrollbar {
+  display: none;
+}
+
+.project-long-text-left,
+.project-long-text-right {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Contenedor de flechas */
+.scroll-arrows {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Estilos de las flechas */
+.scroll-arrow {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-arrow:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(0, 0, 0, 0.4);
+  transform: scale(1.1);
+}
+
+.scroll-arrow:active {
+  transform: scale(0.95);
+}
+
+/* Posicionamiento relativo para los contenedores bottom */
+.project-bottom-left,
+.project-bottom-right {
+  position: relative;
+}

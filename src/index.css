@@ -9,7 +9,7 @@
   /* --debug-border: none; */
   
   /* Column guides - change to 'block' to show, 'none' to hide */
-  --show-column-guides: block;
+  --show-column-guides: none;
   /* --show-column-guides: none; */
 }
 
