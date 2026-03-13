@@ -21,3 +21,6 @@ caso de que el usuario quiera añadir mas miembros a su equipo.
 6| Join componente:
 -Creamos el compoennte Join.
 **resta chequear redireccion a correo electronico.
+
+7| footer adjust:
+-Ajustes en el footer.

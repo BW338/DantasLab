@@ -1,11 +1,13 @@
 import './Footer.css'
+import nyuLogo from '../../assets/nyu-logo.png'
+import dLogo from '../../assets/d.png'
 
 function Footer() {
   return (
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-logo">
-          <span className="footer-logo-d">d</span>
+          <img src={dLogo} alt="Dantas Lab Logo" className="footer-logo-d-image" />
         </div>
         <div className="footer-center">
           <nav className="footer-nav">
@@ -34,13 +36,13 @@ function Footer() {
             <p className="footer-address">New York, NY 10016</p>
             <p className="footer-address">646-929-7870</p>
           </div>
-          <div className="footer-nyu-logo">
-            NYU Langone<br/>Health
-          </div>
+        </div>
+        <div className="footer-nyu-logo">
+          <img src={nyuLogo} alt="NYU Langone Health" className="nyu-logo-image" />
         </div>
       </div>
       <div className="footer-bottom">
-        <p>D A N T A S L A B  * 2 0 2 6 *</p>
+        <p>D A N T A S L A B    * 2 0 2 6 *</p>
       </div>
     </footer>
   )
