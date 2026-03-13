@@ -1,0 +1,105 @@
+.join-section {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.join-container {
+  width: 1919px;
+  height: 275px;
+  opacity: 1;
+  border-top: 1px solid #000;
+  /* border: 2px solid blue; */
+  position: relative;
+}
+
+.join-content {
+  width: 468px;
+  height: 82px;
+  opacity: 1;
+  position: absolute;
+  top: 55px;
+  left: 232.5px;
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.join-content h2 {
+  font-family: 'Fira Code', monospace;
+  font-weight: 450;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin: 0;
+  padding: 0;
+  color: #1E1E1E;
+}
+
+.join-secondary {
+  width: 472px;
+  height: 82px;
+  opacity: 1;
+  position: absolute;
+  top: 55px;
+  left: 723.5px;
+  /* border: 2px solid green; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.join-secondary p {
+  font-family: 'DM Mono', monospace;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 23px;
+  letter-spacing: 0%;
+  margin: 0;
+  padding: 0;
+  color: #1E1E1E;
+}
+
+.join-third {
+  width: 472px;
+  height: 46px;
+  opacity: 1;
+  position: absolute;
+  top: 137px;
+  left: 723.5px;
+  /* border: 2px solid orange; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mail-icon {
+  height: 24px;
+  width: auto;
+  object-fit: contain;
+  margin-right: 12px;
+}
+
+.email-link {
+  font-family: 'DM Mono', monospace;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 23px;
+  letter-spacing: 0%;
+  color: #1E1E1E;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.email-link:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.email-link:active {
+  color: #0056b3;
+}

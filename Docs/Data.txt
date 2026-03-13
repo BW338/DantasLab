@@ -17,3 +17,7 @@ caso de que el usuario quiera añadir mas miembros a su equipo.
 
 5| Project Cards:
 -Añadimos las cards de los proyectos.
+
+6| Join componente:
+-Creamos el compoennte Join.
+**resta chequear redireccion a correo electronico.
