@@ -27,11 +27,12 @@
 
 .projects-content {
   width: 1738px;
-  height: 814px;
+  min-height: 814px;
   opacity: 1;
   gap: 22px;
   padding-right: 139px;
   padding-left: 139px;
+  padding-bottom: 80px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 472px);

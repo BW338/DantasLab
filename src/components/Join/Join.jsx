@@ -21,7 +21,7 @@ function Join() {
   }
 
   return (
-    <section className="join-section">
+    <section className="join-section" id="work-with-us">
       <div className="join-container">
         <div className="join-content">
           <h2>Join our team</h2>

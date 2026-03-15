@@ -24,3 +24,8 @@ caso de que el usuario quiera añadir mas miembros a su equipo.
 
 7| footer adjust:
 -Ajustes en el footer.
+
+8| Publish Cards:
+-Renombramos el componente de "project" a "publish".
+-Formateamos las cards.
+-Se crea el modal para mostrar las card en detalle.

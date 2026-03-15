@@ -11,7 +11,7 @@ function Footer() {
         </div>
         <div className="footer-center">
           <nav className="footer-nav">
-            <a href="#home">HOME</a>
+            <a href="#home">HOME </a>
             <span>|</span>
             <a href="#about">About Us</a>
             <span>|</span>
@@ -27,7 +27,7 @@ function Footer() {
           <nav className="footer-nav">
             <a href="#team">TEAM</a>
           </nav>
-          <p className="footer-contact">WORK WITH US > Contact | Join Our Team</p>
+          <p className="footer-contact">WORK WITH US  Contact | Join Our Team</p>
         </div>
         <div className="footer-right">
           <div className="footer-address-group">

@@ -2,7 +2,7 @@ import './About.css'
 
 function About() {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <h2>About Us</h2>
       <div className="about-text">
         <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.  If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>

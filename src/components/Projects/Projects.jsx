@@ -32,7 +32,7 @@ function Projects() {
   }
 
   return (
-    <section className="projects-section">
+    <section className="projects-section" id="projects">
       <div className="projects-container">
         <div className="projects-title-container">
           <h2>PROJECTS</h2>

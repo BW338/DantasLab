@@ -1,16 +1,10 @@
 import './Logo.css'
+import logoDL from '../../../assets/logo-dl.png'
 
 function Logo() {
   return (
     <div className="logo-container">
-      <div className="logo">
-        <span className="logo-d">d</span>
-        <span className="logo-dantas">DANTAS</span>
-        <span className="logo-lab">LAB</span>
-      </div>
-      <p className="logo-subtitle">
-        CANCER IMMUNITY<br/>& METABOLISM
-      </p>
+      <img src={logoDL} alt="Dantas Lab Logo" className="logo-dl-image" />
     </div>
   )
 }

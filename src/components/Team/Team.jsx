@@ -72,7 +72,7 @@ function Team() {
   }
 
   return (
-    <section className="team">
+    <section className="team" id="team">
       <div className="team-header">
         <h2>TEAM</h2>
         <p>We are building a multidisciplinary team committed to excellence in research and innovation. Our director leads the vision as we continue expanding our scientific capabilities.</p>
