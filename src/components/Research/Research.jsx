@@ -1,6 +1,46 @@
 import './Research.css'
+import { useLocation, useNavigate } from 'react-router-dom'
+import playIcon from '../../assets/play.png'
 
 function Research() {
+  const location = useLocation()
+  const navigate = useNavigate()
+
+  const handleScrollClick = (e, targetId) => {
+    e.preventDefault()
+
+    // Si estamos en la página Home, hacer scroll directo
+    if (location.pathname === '/') {
+      const targetElement = document.getElementById(targetId)
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' })
+      }
+    } else {
+      // Si estamos en otra página, navegar al Home primero y luego hacer scroll
+      navigate('/')
+
+      // Esperar a que la navegación se complete y luego hacer scroll
+      setTimeout(() => {
+        const targetElement = document.getElementById(targetId)
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' })
+        }
+      }, 100)
+    }
+  }
+
+  const handlePublicationsClick = () => {
+    navigate('/publications')
+    
+    // Hacer scroll suave al contenido de publicaciones después de la navegación
+    setTimeout(() => {
+      const targetElement = document.getElementById('publications-content')
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+    }, 100)
+  }
+
   return (
     <section className="research">
       <div className="research-content">
@@ -20,8 +60,12 @@ function Research() {
               <li>Donec sagittis feugis ultrices, euismod lacus a.</li>
               <li>Quisque rhoncus leo et neque lobortis.</li>
             </ul>
-            <button className="view-button">
-              <span>VIEW PROJECTS</span>
+            <button
+              className="view-button"
+              onClick={(e) => handleScrollClick(e, 'projects')}
+            >
+              <span>View projects</span>
+              <div className="view-button-icon"></div>
             </button>
           </div>
           <div className="publications">
@@ -31,8 +75,12 @@ function Research() {
               <li>Donec sagittis mauris ultrices, euismod lacus a.</li>
               <li>Quisque rhoncus leo et massa bibendum.</li>
             </ul>
-            <button className="view-button">
-              <span>VIEW PUBS</span>
+            <button
+              className="view-button"
+              onClick={handlePublicationsClick}
+            >
+              <span>View publications</span>
+              <div className="view-button-icon"></div>
             </button>
           </div>
         </div>
@@ -40,5 +88,6 @@ function Research() {
     </section>
   )
 }
+
 
 export default Research

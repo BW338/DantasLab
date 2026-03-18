@@ -67,9 +67,9 @@ function Publications() {
   ]
 
   return (
-    <>
+    <div className="publications-page">
       <Hero title="Publications" />
-      <section className="projects-header">
+      <section className="projects-header" id="publications-content">
         <h2 className="projects-title">papers & publications</h2>
       </section>
       <section className="projects-content">
@@ -77,7 +77,7 @@ function Publications() {
           <PublishCard key={publication.id} publication={publication} />
         ))}
       </section>
-    </>
+    </div>
   )
 }
 

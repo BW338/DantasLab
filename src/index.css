@@ -83,3 +83,31 @@ a {
     --side-padding: var(--side-padding-mobile);
   }
 }
+/* Transiciones suaves globales para navegación */
+* {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Suavizar el scroll global */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Transiciones para cambios de página */
+.body-container {
+  transition: opacity 0.4s ease-in-out;
+}
+
+/* Mejorar las transiciones de los botones */
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+/* Transición suave para los enlaces */
+a {
+  transition: all 0.3s ease;
+}

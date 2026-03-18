@@ -9,6 +9,16 @@ function Navigation() {
 
   const handleClick = (link) => {
     setActiveLink(link)
+    
+    // Si es navegación a publicaciones, hacer scroll suave al contenido
+    if (link === 'publications') {
+      setTimeout(() => {
+        const targetElement = document.getElementById('publications-content')
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+      }, 100)
+    }
   }
 
   const isActive = (path) => {
@@ -47,7 +57,7 @@ function Navigation() {
         className={isActive('/') ? 'active' : ''}
         onClick={() => handleClick('home')}
       >
-        <span className="nav-text">HOME</span>
+        <span className="nav-text">RESEARCH</span>
       </Link>
       <a 
         href="#projects"
