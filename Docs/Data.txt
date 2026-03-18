@@ -33,3 +33,6 @@ caso de que el usuario quiera añadir mas miembros a su equipo.
 9| navigation styles:
 -Suavizamos navegacion y scrolleos.
 -Modificamos estilo y añadimos navegacion a botones "view"
+
+10| Responsive to tablet:
+-Se ajusta responsibidad a resolucion tablet.

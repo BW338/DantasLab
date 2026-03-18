@@ -153,14 +153,38 @@
   border: var(--debug-border);
 }
 
+/* MEDIA QUERIES SOLO PARA TABLET Y MOBILE - NO TOCAR DESKTOP */
+
+/* Tablet */
 @media (max-width: 1024px) {
   .team {
     width: 100%;
     height: auto;
-    padding: 40px var(--side-padding-mobile);
+    padding: 60px var(--side-padding);
+    gap: 40px;
   }
   
   .team-header {
+    width: 100%;
+    height: auto;
+    gap: 20px;
+  }
+  
+  .team-header h2 {
+    width: 100%;
+    height: auto;
+    font-size: clamp(28px, 4vw, 36px);
+  }
+  
+  .team-header p {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  
+  .team-cards-wrapper {
     width: 100%;
     height: auto;
   }
@@ -169,5 +193,48 @@
     width: 100%;
     height: auto;
     flex-direction: column;
+    gap: 30px;
+    overflow: visible;
+  }
+  
+  .team-card {
+    width: 100%;
+  }
+  
+  .carousel-arrow {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .team {
+    padding: 50px var(--side-padding);
+    gap: 30px;
+  }
+  
+  .team-header p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  
+  .team-cards {
+    gap: 25px;
+  }
+  
+  .team-card-header {
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .team-image {
+    margin: 0 auto;
+  }
+  
+  .team-bio {
+    padding: 20px;
+    font-size: 12px;
   }
 }

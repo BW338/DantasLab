@@ -111,3 +111,30 @@ button:hover {
 a {
   transition: all 0.3s ease;
 }
+/* Sistema responsive mejorado */
+:root {
+  --side-padding-desktop: 230px;
+  --side-padding-tablet: 60px;
+  --max-content-width: 1920px;
+}
+
+/* Aplicar variables responsive */
+@media (max-width: 1024px) {
+  :root {
+    --side-padding: var(--side-padding-tablet);
+  }
+}
+
+/* Prevenir overflow horizontal */
+body {
+  overflow-x: hidden;
+}
+
+/* Contenedor base responsive */
+.responsive-container {
+  width: 100%;
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding-left: var(--side-padding);
+  padding-right: var(--side-padding);
+}

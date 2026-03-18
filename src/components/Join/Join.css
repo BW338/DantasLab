@@ -7,12 +7,15 @@
 }
 
 .join-container {
-  width: 1919px;
+  width: 100%;
+  max-width: var(--max-content-width);
   height: 275px;
   opacity: 1;
   border-top: 1px solid #000;
   /* border: 2px solid blue; */
   position: relative;
+  margin: 0 auto;
+  padding: 0 var(--side-padding);
 }
 
 .join-content {
@@ -102,4 +105,70 @@
 
 .email-link:active {
   color: #0056b3;
+}
+/* MEDIA QUERIES SOLO PARA TABLET Y MOBILE - NO TOCAR DESKTOP */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .join-container {
+    height: auto;
+    padding: 60px var(--side-padding);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .join-content {
+    position: static;
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  
+  .join-content h2 {
+    font-size: clamp(28px, 4vw, 36px);
+  }
+  
+  .join-secondary {
+    position: static;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .join-secondary p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  
+  .join-third {
+    position: static;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .join-container {
+    padding: 50px var(--side-padding);
+    gap: 25px;
+  }
+  
+  .join-secondary p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  
+  .join-third {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .mail-icon {
+    margin: 0 0 5px 0;
+  }
 }

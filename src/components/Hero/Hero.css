@@ -1,21 +1,19 @@
 .hero {
   background: #BABABA;
-  padding-top: 107px;
-  padding-bottom: 120px;
+  padding: 107px var(--side-padding) 120px;
+  width: 100%;
 }
 
 .hero-container {
   position: relative;
-  margin-left: 238px;
-  width: 992px;
-  height: 174px;
-  opacity: 1;
+  max-width: var(--max-content-width);
+  margin: 0 auto;
 }
 
 .hero h1 {
   font-family: 'DM Mono', monospace;
   font-weight: 400;
-  font-size: 64px;
+  font-size: clamp(36px, 5vw, 64px);
   line-height: 100%;
   letter-spacing: 0%;
   color: #FFFFFF;
@@ -24,18 +22,16 @@
   display: block;
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 80px var(--side-padding) 100px;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .hero {
-    padding-top: 60px;
-  }
-  
-  .hero-container {
-    margin-left: var(--side-padding);
-    width: auto;
-    height: auto;
-  }
-  
-  .hero h1 {
-    font-size: 36px;
+    padding: 60px var(--side-padding) 80px;
   }
 }

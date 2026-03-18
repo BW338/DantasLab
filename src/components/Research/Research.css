@@ -1,7 +1,7 @@
 .research {
   width: 100%;
   min-height: 458px;
-  padding: 0;
+  padding: 0 var(--side-padding);
   background: #fff;
   position: relative;
   margin-top: 36px;
@@ -10,6 +10,8 @@
 .research-content {
   position: relative;
   height: 458px;
+  max-width: var(--max-content-width);
+  margin: 0 auto;
 }
 
 .research-title {
@@ -18,7 +20,7 @@
   opacity: 1;
   position: absolute;
   top: 70px;
-  left: 232px;
+  left: 0;
 }
 
 .research-title h2 {
@@ -37,7 +39,7 @@
   opacity: 1;
   position: absolute;
   top: 60px;
-  left: 485px;
+  left: 253px;
 }
 
 .research-text p {
@@ -53,7 +55,7 @@
 .research-sidebar {
   position: absolute;
   top: 60px;
-  left: 972px;
+  right: 0;
   display: flex;
   flex-direction: column;
   gap: 0px;
@@ -65,7 +67,6 @@
   width: 472px;
   height: 164px;
   opacity: 1;
- /*/ border: 1px solid red;*/
 }
 
 .projects h3,
@@ -140,8 +141,8 @@
 }
 
 .view-button-icon {
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
   border: 1px solid #1E1E1E;
   background: url('/src/assets/play.png') no-repeat center;
   background-size: 8px 8px;
@@ -150,7 +151,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 2px;
 }
 
 .view-button:hover {
@@ -158,38 +158,98 @@
   transform: translateY(-1px);
 }
 
-@media (max-width: 768px) {
+/* MEDIA QUERIES SOLO PARA TABLET Y MOBILE - NO TOCAR DESKTOP */
+
+/* Tablet */
+@media (max-width: 1024px) {
   .research {
-    min-height: auto;
+    padding: 40px var(--side-padding);
+    margin-top: 20px;
   }
   
   .research-content {
     height: auto;
     display: flex;
     flex-direction: column;
-    padding: 40px var(--side-padding-mobile);
+    gap: 30px;
   }
   
   .research-title {
     position: static;
-    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  
+  .research-title h2 {
+    font-size: clamp(28px, 4vw, 36px);
   }
   
   .research-text {
     position: static;
     width: 100%;
     height: auto;
-    margin-bottom: 40px;
+  }
+  
+  .research-text p {
+    font-size: 13px;
+    line-height: 1.6;
   }
   
   .research-sidebar {
     position: static;
     width: 100%;
+    flex-direction: row;
+    gap: 30px;
+    align-items: stretch;
+  }
+  
+  .projects,
+  .publications {
+    flex: 1;
+    width: auto;
+    height: auto;
+  }
+  
+  .projects ul,
+  .publications ul {
+    width: 100%;
+    height: auto;
+  }
+  
+  .view-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .research {
+    padding: 30px var(--side-padding);
+  }
+  
+  .research-content {
+    gap: 25px;
+  }
+  
+  .research-text p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  
+  .research-sidebar {
+    flex-direction: column;
+    gap: 30px;
   }
   
   .projects,
   .publications {
     width: 100%;
-    height: auto;
+  }
+  
+  .view-button {
+    max-width: 100%;
+    font-size: 14px;
   }
 }

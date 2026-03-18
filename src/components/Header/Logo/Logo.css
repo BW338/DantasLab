@@ -1,7 +1,8 @@
 .logo-container {
-  position: absolute;
-  top: 74px;
-  left: 1544px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo-dl-image {
@@ -9,4 +10,20 @@
   height: 145px;
   opacity: 1;
   object-fit: contain;
+}
+
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+  .logo-dl-image {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .logo-dl-image {
+    width: 100px;
+    height: 100px;
+  }
 }

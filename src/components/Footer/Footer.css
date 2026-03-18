@@ -123,20 +123,142 @@
   /* border: 2px solid orange; */
 }
 
-@media (max-width: 768px) {
+/* Elementos para mobile - ocultos por defecto */
+.footer-top-row {
+  display: none;
+}
+
+.footer-right-group {
+  display: none;
+}
+
+.footer-center-mobile {
+  display: none;
+}
+
+/* MEDIA QUERIES SOLO PARA TABLET Y MOBILE - NO TOCAR DESKTOP */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .footer {
+    width: 100%;
+    max-width: var(--max-content-width);
+    padding: 0 var(--side-padding);
+  }
+  
   .footer-content {
-    flex-direction: column;
-    gap: 30px;
-    padding: 0 var(--side-padding-mobile) 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 39px;
+    height: calc(100% - 80px);
+  }
+  
+  .footer-logo {
+    position: static;
+    flex: 0 0 auto;
+  }
+  
+  .footer-center {
+    position: static;
+    flex: 1;
+    margin: 0 20px;
+    max-width: 300px;
   }
   
   .footer-right {
-    text-align: left;
-    align-items: flex-start;
+    position: static;
+    flex: 0 0 auto;
+    margin: 0 20px;
+  }
+  
+  .footer-nyu-logo {
+    position: static;
+    flex: 0 0 auto;
   }
   
   .footer-bottom {
-    padding-left: var(--side-padding-mobile);
-    padding-right: var(--side-padding-mobile);
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    padding-left: var(--side-padding);
+    padding-right: var(--side-padding);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .footer {
+    width: 100%;
+    padding: 40px var(--side-padding) 25px;
+    height: auto;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* Ocultar elementos originales en mobile */
+  .footer-content > .footer-logo,
+  .footer-content > .footer-center,
+  .footer-content > .footer-right,
+  .footer-content > .footer-nyu-logo,
+  .footer-top-row,
+  .footer-center-mobile,
+  .footer-right-group {
+    display: none;
+  }
+  
+  /* Ocultar footer-bottom original */
+  .footer > .footer-bottom {
+    display: none;
+  }
+  
+  /* Mostrar solo los elementos necesarios */
+  .footer-content > .footer-logo {
+    display: flex !important;
+    position: static;
+    flex: 0 0 auto;
+  }
+  
+  .footer-content > .footer-center {
+    display: flex !important;
+    position: static;
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .footer-content > .footer-nyu-logo {
+    display: flex !important;
+    position: static;
+    flex: 0 0 auto;
+  }
+  
+  .footer-nav {
+    font-size: 9px;
+    gap: 4px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer-contact {
+    font-size: 9px;
+    text-align: center;
+    margin-top: 8px;
+  }
+  
+  .nyu-logo-image {
+    width: 80px;
+    height: auto;
+  }
+  
+  .footer-logo-d-image {
+    width: 50px;
+    height: auto;
   }
 }

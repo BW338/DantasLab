@@ -3,9 +3,6 @@
   flex-direction: column;
   gap: 0;
   width: 280px;
-  position: absolute;
-  bottom: 0;
-  left: 230px;
 }
 
 .nav a {
@@ -15,7 +12,6 @@
   position: relative;
   overflow: visible;
   display: block;
-
 }
 
 .nav a::after {
@@ -90,14 +86,147 @@
   }
 }
 
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+  .nav {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .nav-text {
+    font-size: 13px;
+    letter-spacing: 0.2em;
+  }
+  
+  .nav a:hover:not(.active) .nav-text {
+    letter-spacing: 0.4em;
+  }
+  
+  /* Simplificar las líneas en tablet */
+  .nav a::after,
+  .nav a:first-child::before {
+    left: 0;
+    right: 0;
+  }
+}
+
 @media (max-width: 768px) {
   .nav {
     width: 50%;
     min-width: 200px;
-    padding-left: calc(var(--side-padding) * 2);
+    left: 30px;
+    position: static;
   }
   
   .nav-text {
     font-size: 12px;
+    letter-spacing: 0.15em;
+  }
+  
+  .nav a:hover:not(.active) .nav-text {
+    letter-spacing: 0.3em;
+  }
+}
+
+/* Botón hamburguesa - oculto por defecto */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger-line.open:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger-line.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-line.open:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Overlay para cerrar el menú */
+.mobile-menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* Estilos para mobile */
+@media (max-width: 768px) {
+  /* Mostrar botón hamburguesa */
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
+  /* Ocultar navegación por defecto en mobile */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: #fff;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    padding: 80px 30px 30px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Mostrar navegación cuando está abierta */
+  .nav.mobile-open {
+    left: 0;
+  }
+  
+  /* Mostrar overlay cuando el menú está abierto */
+  .nav.mobile-open ~ .mobile-menu-overlay {
+    display: block;
+  }
+  
+  /* Ajustar estilos de los enlaces en mobile */
+  .nav a {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .nav a:first-child::before,
+  .nav a::after {
+    display: none;
+  }
+  
+  .nav-text {
+    font-size: 16px;
+    letter-spacing: 0.1em;
+  }
+  
+  /* Simplificar animaciones en mobile */
+  .nav a.active .nav-text {
+    animation: none;
+    font-weight: 700;
+    letter-spacing: 0.2em;
   }
 }
